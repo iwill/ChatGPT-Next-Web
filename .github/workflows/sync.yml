@@ -32,6 +32,10 @@ jobs:
           # Set test_mode true to run tests instead of the true action!!
           test_mode: false
 
+          # Set `git pull --rebase` and `push --force`
+          git_config_pull_rebase: true
+          target_branch_push_args: --force
+
       - name: Sync check
         if: failure()
         run: |
